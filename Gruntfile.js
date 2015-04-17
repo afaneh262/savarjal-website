@@ -345,7 +345,7 @@ module.exports = function (grunt) {
       },
       heroku: {
         options: {
-          remote: 'git@heroku.com:savarjal-website.git',
+          remote: 'git@heroku.com:savarjal.git',
           branch: 'master',
           tag: pkg.version
         }
