@@ -345,7 +345,7 @@ module.exports = function (grunt) {
       },
       heroku: {
         options: {
-          remote: 'git@heroku.com:obscure-everglades-9952.git',
+          remote: 'git@heroku.com:savarjal-website.git',
           branch: 'master',
           tag: pkg.version
         }
