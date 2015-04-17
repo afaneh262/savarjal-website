@@ -331,33 +331,32 @@ module.exports = function (grunt) {
     },
 
     buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
         options: {
-          dir: 'dist',
-          commit: true,
-          push: true,
-          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-        },
-        pages: {
-          options: {
-            remote: 'git@github.com:afaneh262/savarjal_website.git',
-            branch: 'gh-pages'
-          }
-        },
-        heroku: {
-          options: {
-            remote: 'git@heroku.com:example-heroku-webapp-1988.git',
-            branch: 'master',
-            tag: pkg.version
-          }
-        },
-        local: {
-          options: {
-            remote: '../',
-            branch: 'build'
-          }
+          remote: 'git@github.com:afaneh262/savarjal_website.git',
+          branch: 'gh-pages'
+        }
+      },
+      heroku: {
+        options: {
+          remote: 'git@heroku.com:example-heroku-webapp-1988.git',
+          branch: 'master',
+          tag: pkg.version
+        }
+      },
+      local: {
+        options: {
+          remote: '../',
+          branch: 'build'
         }
       }
-    });
+    }
 
   });
 
